@@ -18,9 +18,6 @@
       "css": ["lib/bootstrap/css/bootstrap.min.css"],
       "js": ["lib/jquery.js","lib/bootstrap/js/bootstrap.min.js","userscript/myscript.js"]
     }
-  ]
-
+  ],
+  "update_url":"http://clients2.google.com/service/update2/crx"
 }
-
-
-/*"http://home.asiainfo.com/AISSE/Reimbursement/TravelExpensesVoucher/TravelExpensesVoucherInputForeign.aspx*",*/
