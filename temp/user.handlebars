@@ -1,0 +1,86 @@
+<div class="panel panel-success">
+	  <div class="panel-heading">
+	  <span class="glyphicon glyphicon-user" style="font-size:18px;color:#3c763d;top:4px;margin-right:10px;"></span>
+	  {{name}}，您本次的报销单明细如下： </div>	
+ 	 <table class="table table-bordered mytable">
+		 <tr>
+		 	<th>报销总金额</th>
+		 	<th>报销类型</th>
+		 	<th>出差天数 <small style="font-size:11px;font-weight:normal;">{{dayPrice}}/天</small></th>
+		 	<th>机票预定</th>
+		 </tr>
+		 <tr>
+		 	<td>{{totalFee}} <span class="mgl10 "><a href="#nogo" data-toggle="popover" title="总金额构成明细" id="ex_details">显示明细</a></span></td>
+		 	<td>{{applyCheck}} <span class="mgl10 "><a href="#nogo" data-toggle="popover" title="提示" id="ex_details_ts">提示</a></span></td>
+		 	<td>{{travelDay}} <span class="mgl10 "><a href="#nogo" data-toggle="popover" title="出差目的" id="ex_details_tg">显示出差目的</a></span></td>
+		 	<td>{{showTick ticket ticketInfo}} <span class="mgl10 "><a href="#nogo" data-toggle="popover" title="机票明细" id="ex_details_tick">显示机票明细</a></span></td>
+		 </tr>
+	 </table>
+
+  	<div id="ex_tooltip" class="hidden">
+		<div>
+			<p>机票款支付现金：<mark>{{isNum this.feeTotalList.0.}}</mark></p>
+			<p>火车票及长途汽车费：<mark>{{isNum this.feeTotalList.1.}}</mark></p>
+			<p>住宿费：<mark>{{isNum this.feeTotalList.2.}}</mark></p>
+			<p>出租车/巴士/停车费等：<mark>{{isNum this.feeTotalList.3.}}</mark></p>
+			<p>电话费/电报费：<mark>{{isNum this.feeTotalList.4.}}</mark></p>
+			<p>订票费/手续费/邮寄费：<mark>{{isNum this.feeTotalList.5.}}</mark></p>
+			<p>机场往返交通费：<mark>{{isNum this.feeTotalList.6.}}</mark></p>
+			<p>差旅费-发票差旅补助：<mark>{{isNum this.feeTotalList.7.}}</mark></p>
+			<p>差旅费-无票差旅补助：<mark>{{isNum this.feeTotalList.8.}}</mark></p>
+		</div>
+	</div>
+  	<div id="ex_tooltip_target" class="hidden">
+		<div>
+			{{travelDet}}
+		</div>
+	</div>
+  	<div id="ex_tooltip_ticket" class="hidden">
+		<div>
+			{{ticketInfo}}
+		</div>
+	</div>
+  	<div id="ex_tooltip_ts" class="hidden">
+		<div>
+			<p>开具发票时，注意公司名称：</p>
+			<p>亚信科技（南京）有限公司</p>
+			<p>亚信科技（中国）有限公司</p>
+			<p>亚信科技（成都）有限公司</p>
+		</div>
+	</div>
+	
+</div>
+
+{{#each this.feeList}}
+<div class="panel panel-info">
+	  <div class="panel-heading">
+	  <span class="glyphicon glyphicon-send" style="font-size:18px;color:#428bca;top:4px;margin-right:10px;"></span>
+	  您的第{{addOne @index}}段行程：{{arrofTraval ../this.fromToList  ../this.dateList  @index }} <span class="mgl20">{{countDate ../this.dateList  @index }}</span><span class="mgl20">{{countMoney ../this.dateList  ../this.dayPrice  @index }}</span></div>	
+ 	 <table class="table table-bordered mytable">
+		 <tr>
+		 	<th>机票款支付现金</th>
+		 	<th>火车/长途汽车费</th>
+		 	<th>住宿费</th>
+		 	<th>出租车/巴士/停车费</th>
+		 	<th>电话费/电报费</th>
+		 	<th>订票费/手续费/邮寄费</th>
+		 	<th>机场往返交通费</th>
+		 	<th>有票差旅补助</th>
+		 	<th>无票差旅补助</th>
+		 	<th>合计</th>
+		 </tr>
+		 <tr>
+		 	<td>{{isNum this.0.}}</td>
+		 	<td>{{isNum this.1.}}</td>
+		 	<td>{{isNum this.2.}}</td>
+		 	<td>{{isNum this.3.}}</td>
+		 	<td>{{isNum this.4.}}</td>
+		 	<td>{{isNum this.5.}}</td>
+		 	<td>{{isNum this.6.}}</td>
+		 	<td>{{isNum this.7.}}</td>
+		 	<td>{{isNum this.8.}}</td>
+		 	<td>{{arrof ../this.colTotal  @index }}</td>
+		 </tr>
+	 </table>
+</div>
+{{/each}}

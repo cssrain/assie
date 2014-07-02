@@ -1,0 +1,26 @@
+{
+  "name": "亚信报销助手",
+  "manifest_version":2,
+  "version": "0.1",
+  "description": "为了节约大家时间，提供工作效率，方便填写报销明细，故开发了此扩展。主要功能：一键预览和一键生成。",
+  "permissions": ["tabs", "http://*/*","storage"],
+  "browser_action": {
+    "default_title": "",
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "background": {
+      "page": "background.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://home.asiainfo.com/AISSE/Reimbursement/PettyCashVoucher/ItemTravelDetailInput.aspx*" ],
+      "css": ["lib/bootstrap/css/bootstrap.min.css"],
+      "js": ["lib/jquery.js","lib/bootstrap/js/bootstrap.min.js","userscript/myscript.js"]
+    }
+  ]
+
+}
+
+
+/*"http://home.asiainfo.com/AISSE/Reimbursement/TravelExpensesVoucher/TravelExpensesVoucherInputForeign.aspx*",*/

@@ -1,0 +1,22 @@
+.pd20{
+	padding:20px;
+}
+.mainContent{
+	width:1000px;
+	margin:0 auto;
+	border:1px solid #ccc;
+}
+
+.mytable>tbody>tr>th,
+.mytable>tbody>tr>td{
+	font-size:12px;
+}
+.mgl10{
+	margin-left: 10px;
+}
+.mgl20{
+	margin-left: 20px;
+}
+.mglfont{
+	font-size: 12px;
+}
