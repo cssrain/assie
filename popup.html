@@ -4,23 +4,54 @@
     <meta charset='utf-8'>
     <title></title>
     <link rel='stylesheet' href='lib/bootstrap/css/bootstrap.min.css' />
+    <link rel="stylesheet" href="css/hum/hum.css">
     <link rel='stylesheet' href='css/mystyles.css' />
   </head>
   <body>
-    <p>为了节约大家时间，提供工作效率，方便填写报销明细，故开发了此扩展。</p>
-    <p>主要功能：一键预览报销单、一键生成明细。</p>
-    <ul>
-      <li>一键预览报销单。在报销页面，点击下方的“一键预览报销单”按钮，即可更直观的预览本次报销的详情。</li>
-      <li>一键生成明细。在明细页面内，把明细都生成。在使用一键生成明细时，如果只填写一个，另外2个不填写，那么另外2个会被冲掉，所以请使用时，务必都填写（如果有明细的话）。</li>
-    </ul>
-    <p>亲，赶紧使用吧。如有问题，请反馈到：shandl@  后面你懂的。</p>
+
+  <div class="body">
+        <div class="ui-panel-content">
+          <div class="ui-tab" id="J_busiTab">
+            <a class="ui-tab-item active" href="javascript:;">导航</a>
+            <a class="ui-tab-item " href="javascript:;">报销助手</a>
+            <a class="ui-tab-item " href="javascript:;">关于</a>
+          </div>
+        </div>
 
 
-    
-    <a href="javascript:;" class="btn btn-primary " role="button" id="openBg">一键预览报销单</a>
-    <a href="javascript:;" class="btn btn-primary " role="button" id="createDel" style="margin-left:10px;">一键生成明细</a>
+        <div class="tab-wp" id="J_busiContent">
+            
+            <div class="tab-cd">
+                <div class="ui-category fn-clear" id="J_category"></div>
+            </div>
+
+            <div class="tab-cd hidden">
+                <div class="ui-panel-content">
+                <a href="javascript:;" class="btn btn-primary " role="button" id="openBg">一键预览报销单</a>
+                <a href="javascript:;" class="btn btn-primary " role="button" id="createDel" style="margin-left:10px;">一键生成明细</a>
+                <div class="font1">
+                  <ul>
+                    <li>一键预览报销单：在报销页面，点击下方的“一键预览报销单”按钮，即可更直观的预览本次报销的详情。</li>
+                    <li>一键生成明细：在弹出的明细页面内，把明细都生成。在使用一键生成明细时，如果只填写一个明细，另外2个不填写，那么另外2个会被冲掉，所以请使用时，务必都填写（如果有明细的话）。</li>
+                  </ul>
+                </div>
+                </div>
+            </div> 
+
+            <div class="tab-cd hidden">
+                <p>为了节约大家时间，提供工作效率，方便填写报销明细，故开发了此扩展。</p>
+                <p>主要功能：OA导航，一键预览报销单、一键生成明细。</p>
+                <p>亲，赶紧使用吧。如有问题，请反馈到：shandl@  后面你懂的。</p>
+            </div>
+
+        </div>
+
+    </div>
 
     <script src='lib/jquery.js' ></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js" ></script>
+    <script src="lib/handlebars.runtime-v1.3.0.js" ></script>
+    <script src='temp/link.js' ></script>
     <script src='sys/popup.js'></script>
 
   </body>

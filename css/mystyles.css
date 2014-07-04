@@ -1,4 +1,32 @@
 body{
 	min-width: 300px;
-	padding:10px 20px;
+	overflow-y: hidden;
+}
+.pd{
+	padding:30px 0px;
+}
+.body{
+ 	padding:10px 20px;
+}
+.tab-cd{
+	min-height: 190px;
+}
+.ui-panel-content{
+	padding:4px 0;
+}
+.ui-category .ui-category-icon {
+	margin-bottom: 6px;
+}
+.ui-icon-boot {
+	font-size: 22px;
+	color: #fff;
+	margin-top: 8px;
+}
+.ui-color-0{
+	background:#5f9be6;
+}
+.font1{
+	color:#999;
+	font-size:12px;
+	padding:4px 0;
 }

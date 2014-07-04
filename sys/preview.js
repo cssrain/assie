@@ -54,6 +54,10 @@ $(function(){
 			
 		addPop();
 
+		var txt = '您本次报销总金额是:'+parseFloat( (result.assieUser.totalFee).replace(/\,/g, "") )+'元,'+
+				'共出差'+result.assieUser.travelDay+'天';
+		speakDet(txt);
+		
 	});
 
 });
@@ -83,4 +87,8 @@ function addPop(){
 		"html":true,
 		"trigger": "hover"
 	});
+}
+
+function speakDet(txt){
+	chrome.tts.speak(txt);
 }
