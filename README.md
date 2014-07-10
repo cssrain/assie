@@ -1,7 +1,9 @@
-Asia ASSIE Helper 亚信OA助手
+Asia OA Helper For Chrome 亚信OA助手
 =========
 
 为了节约大家时间，提供工作效率，方便填写报销明细，故开发了此扩展。
+此扩展是一个Chrome的插件，大家可以去Chrome应用商店安装。
+地址是：[亚信OA助手Chrome Plugin](https://chrome.google.com/webstore/detail/ignahanahanaegnacbbiflgfebkbobbl).
 
 ##OA快捷导航
 
