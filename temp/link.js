@@ -14,7 +14,7 @@ function program1(depth0,data) {
   buffer += escapeExpression(stack1)
     + "\" class=\"ui-category-item\">\r\n	<span class=\"ui-category-icon ui-color-"
     + escapeExpression((helper = helpers.setIndex || (depth0 && depth0.setIndex),options={hash:{},data:data},helper ? helper.call(depth0, (data == null || data === false ? data : data.index), options) : helperMissing.call(depth0, "setIndex", (data == null || data === false ? data : data.index), options)))
-    + "\">\r\n	  <span class=\"ui-icon-boot glyphicon ";
+    + "\">\r\n		<span class=\"ui-icon-boot glyphicon ";
   if (helper = helpers.icon) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.icon); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)

@@ -4,19 +4,19 @@ var textHtml = "<div id='ChromeApp_select' class='pd20'></div>"+
 "<div id='ChromeApp_table_jc'></div>"+
 "<div id='ChromeApp_table_yf'></div>"+
 "<div style='padding:20px;' id='ChromeApp_wrap'>"+
-"<textarea class='form-control' rows='10' id='ChromeApp_txt' placeholder='请输入差旅交通费用明细'></textarea>"+
-"<textarea class='form-control hidden' rows='10' id='ChromeApp_txt_jc' placeholder='请输入机场往返费用明细'></textarea>"+
-"<textarea class='form-control hidden' rows='10' id='ChromeApp_txt_yf' placeholder='请输入订票费\/手续费\/邮寄费明细'></textarea>"+
+"<textarea class='form-control' rows='8' id='ChromeApp_txt' placeholder='请输入差旅交通费用明细'></textarea>"+
+"<textarea class='form-control hidden' rows='8' id='ChromeApp_txt_jc' placeholder='请输入机场往返费用明细'></textarea>"+
+"<textarea class='form-control hidden' rows='8' id='ChromeApp_txt_yf' placeholder='请输入订票费\/手续费\/邮寄费明细'></textarea>"+
 "</div>"+
 "<div class='text-center'><input type='button' class='btn btn-primary' value='一键生成' id='ChromeApp_btn'  />"+
 "<input type='button' class='btn btn-primary' style='margin-left:20px;' id='linkButtonSubmitDown_LinkButtonAction' onclick='javascript:__doPostBack(\"linkButtonSubmitDown$LinkButtonAction\",\"\")'' value='提交保存'> </div>";
 $("#Form1").append(textHtml);
 //插入下拉框
-var selectHtml = '<ul class="nav nav-pills" id="ChromeApp_sel">'+
+var selectHtml = '<ul class="nav nav-pills" id="ChromeApp_sel" style="padding:0 10px;">'+
   '<li class="active"><a href="javascript:;">差旅交通费用明细</a></li>'+
   '<li><a href="javascript:;">机场往返费用明细</a></li>'+
   '<li><a href="javascript:;">订票费\/手续费\/邮寄费明细</a></li>'+
-'</ul>';
+'</ul><p style="padding:10px 20px;"><a href="javascript:;" id="ChromeApp_open">不知道插入什么数据？赶紧使用数据转换工具</a></p>';
 $("#ChromeApp_select").html(selectHtml);
 //隐藏页面中原有的保存按钮
 //$("#PanelTraffic").hide();
@@ -172,7 +172,7 @@ function formatCurrency(num) {
         num = num.substring(0, num.length - (4 * i + 3)) + ',' +
 	num.substring(num.length - (4 * i + 3));
     return (((sign) ? '' : '-') + num + '.' + cents);
-}
+}             
 
 $(function(){
 	$("#ChromeApp_btn").click(function(){
@@ -187,4 +187,8 @@ $(function(){
 		$("#ChromeApp_wrap textarea").eq(idx).removeClass("hidden").siblings().addClass("hidden");
 		return false;
 	});
+    $("#ChromeApp_open").click(function(){
+        chrome.extension.sendRequest({"msg":"open"});
+        return false;
+    });
 });

@@ -5,11 +5,6 @@
 
 
 
-function addCurrentPage(){
-    console.log('前台');
-    alert(  $("#ApplyBaseInfo1_DropdownlistEmployeeNumber").length );
-}
-
 chrome.extension.onMessage.addListener(function(request, sender, sendResponse) {
     //console.log("Request comes from extention " + sender.tab.url);
     console.log(request.name);
@@ -28,3 +23,21 @@ chrome.tabs.onCreated.addListener(function(tab) {
 });
    
    */
+
+chrome.extension.onRequest.addListener(function(json){
+   if(json.msg&&json.msg=="open"){
+      openDataToolsPage();
+   }
+});
+
+
+function openDataToolsPage(){
+  var url = chrome.extension.getURL("dataConverter.html") ;
+  window.open( url );
+    /*
+      chrome.tabs.create({
+          url: chrome.extension.getURL("dataConverter.html"), 
+          selected: true
+      });
+  */
+}
