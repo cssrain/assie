@@ -25,10 +25,13 @@ Asia OA Helper For Chrome 亚信OA助手
 ![一键预览报销单](https://raw.githubusercontent.com/cssrain/assie/master/prtsc/4.png)
 
 ##升级记录
+v0.3
+添加数据转换工具，Excel To JSON。
+自定义快捷菜单（配置页）【待做】
+
 v0.2
 添加OA快捷菜单；
 语音读取报销内容；
-自定义快捷菜单（配置页）【未做】
 
 v0.1
 创建第一个版本

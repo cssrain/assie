@@ -1,7 +1,7 @@
 {
   "name": "亚信OA助手",
   "manifest_version":2,
-  "version": "0.2",
+  "version": "0.3",
   "description": "为了节约大家时间，提供工作效率，方便填写报销明细，故开发了此扩展。主要功能：OA导航，一键预览和一键生成。",
   "permissions": ["tabs", "http://*.asiainfo.com/*","storage","tts"],
   "browser_action": {
