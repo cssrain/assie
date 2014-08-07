@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>数据转换工具——Excel Converter To JSON</title>
+    <link rel='stylesheet' href='lib/bootstrap/css/bootstrap.min.css' />
+    <link rel="stylesheet" href="css/hum/hum.css">
+    <link rel='stylesheet' href='css/mystyles.css' />
+  <!-- Date: 2010-08-26 --> 
+  <script src="lib/dataconverter/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="lib/dataconverter/CSVParser.js" type="text/javascript" charset="utf-8"></script>
+  <script src="lib/dataconverter/DataGridRenderer.js" type="text/javascript" charset="utf-8"></script>
+  <script src="lib/dataconverter/converter.js" type="text/javascript" charset="utf-8"></script>
+  <script src="lib/dataconverter/Controller.js" type="text/javascript" charset="utf-8"></script>
+  <script src="sys/jiaban.js" type="text/javascript" charset="utf-8"></script>
+  <style>
+  .groupHeadline,#dataOutput{display: none;}
+  </style>
+</head>
+<body>
+
+<ul class="ui-step ui-step-2">
+  <li class="active">第一步：<br/>填写excel表格加班明细<br/><a href="https://github.com/cssrain/assie/raw/master/data/jiabanTemp.xlsx" target="_blank">加班明细excel模板下载</a></li>
+  <li class="active">第二步：<br/>将excel数据复制到下方的文本框中，然后点击“输出加班小票明细”，则可以生成加班明细。</li>
+</ul>
+
+<div class="ui-panel">
+  <div class="ui-panel-head fn-clear">
+      <h3 class="ui-panel-head-title">复制Excel中的数据到下面文本框中</h3>
+  </div>
+  <div class="ui-panel-container">
+      <div id='converter' class=''></div>
+      <div style="padding:10px;">
+        <div class="ui-panel-content">
+          <button class="ui-btn ui-btn-block" id="jiabanBg">输出加班小票明细</button>
+        </div> 
+      </div>
+  </div> 
+</div>
+
+</body>
+</html>
