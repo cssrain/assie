@@ -65,6 +65,21 @@ $(function(){
 			"name" : "创新",
 			"url" : "http://ims.asiainfo.com/Dispatch/agent/redirect/AILKIPORTAL.html",
 			"icon" : "glyphicon-fullscreen"
+		},
+		{
+			"name" : "UED交流",
+			"url" : "http://cssrain.github.io/",
+			"icon" : "glyphicon-edit"
+		},
+		{
+			"name" : "周报",
+			"url" : "http://cssrain.github.io/trello/",
+			"icon" : "glyphicon-check"
+		},
+		{
+			"name" : "新人成长",
+			"url" : "http://cssrain.github.io/internship/",
+			"icon" : "glyphicon-th"
 		}
 	];
 

@@ -25,6 +25,12 @@ Asia OA Helper For Chrome 亚信OA助手
 ![一键预览报销单](https://raw.githubusercontent.com/cssrain/assie/master/prtsc/4.png)
 
 ##升级记录
+2014.8.12
+添加报销主明细生成，根据excel生成明细。
+
+2014.8.8
+添加自动生成加班小票打印模板。
+
 v0.3
 添加数据转换工具，Excel To JSON。
 自定义快捷菜单（配置页）【待做】

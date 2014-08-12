@@ -5,19 +5,35 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>数据转换工具——Excel Converter To JSON</title>
-  <meta name="author" content="Shan Carter">
+    <link rel='stylesheet' href='lib/bootstrap/css/bootstrap.min.css' />
+    <link rel="stylesheet" href="css/hum/hum.css">
+    <link rel='stylesheet' href='css/mystyles.css' />
   <!-- Date: 2010-08-26 --> 
   <script src="lib/dataconverter/jquery.js" type="text/javascript" charset="utf-8"></script>
   <script src="lib/dataconverter/CSVParser.js" type="text/javascript" charset="utf-8"></script>
   <script src="lib/dataconverter/DataGridRenderer.js" type="text/javascript" charset="utf-8"></script>
   <script src="lib/dataconverter/converter.js" type="text/javascript" charset="utf-8"></script>
   <script src="lib/dataconverter/Controller.js" type="text/javascript" charset="utf-8"></script>
+  <style>
+  .groupHeadline{padding:5px 10px;}
+  </style>
 </head>
 <body>
 
-<div id='converter' class=''></div>
+<div style="background:#6cbff1;color:#fff;">
+    <div style="padding:10px 20px;font-size:14px;">
+      <h4>Excel数据转换工具<span style="color:#EEE;font-size:12px;">：轻松把excel数据转换为json字符串</span></h4>
+      <p><a href="https://github.com/cssrain/assie/raw/master/data/assieTemp.xlsx" target="_blank">主明细和出租车明细excel模板下载</a></p>
+      <p><a href="https://github.com/cssrain/assie/raw/master/data/jiabanTemp.xlsx" target="_blank">加班明细excel模板下载</a></p>
+    </div>
+</div>
+<div class="ui-panel">
+  <div class="ui-panel-container">
+      <div id='converter' class=''></div>
+      <div style="padding:20px;"></div>
+  </div> 
+</div>
 
-<p ><a href="https://github.com/cssrain/assie/raw/master/data/assieTemp.xlsx" target="_blank">excel模板下载</a></p>
 
 </body>
 </html>
