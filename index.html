@@ -1,89 +1,138 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>亚信OA报销助手</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+	<link rel="stylesheet" type="text/css" href="lib/fullpage/jquery.fullPage.css" />
+	<style>
+	html{
+		height: 100%;
+		background: #129de7;
+		color: #fff;
+		font: 14px/1.5em "Helvetica Neue",Arial,"Microsoft Yahei",sans-serif;
+	}
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Asia OA Helper For Chrome : 亚信OA助手" />
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+	/* Style for our header texts
+	* --------------------------------------- */
+	h1{
+		font-size:2.2em;
+		font-family: arial,helvetica;
+		margin:0;
+		padding:0;
+		color:#fff;
+	}
+	p{
+		font-size:1.1em;
+	}
+	h2{
+		font-size: 2em;
+		margin: 0 0 18px 0;
+		font-family: arial,helvetica;
+	}
+	a,a:link{
+		color:#fff;
+	}
+	/* Common styles
+	* --------------------------------------- */
+	img{
+	    -webkit-transition: all 0.7s ease-out;
+		-moz-transition: all 0.7s ease-out;
+		-o-transition: all 0.7s ease-out;
+		transition: all 0.7s ease-out;
+	}
+	.section{
+		text-align:center;
+		overflow:hidden;
+		padding: 20px ;
+	}
+	.section img{
+		height: auto;
+		margin: 40px 0 0 0;
+		max-width: 100%;
+	}
+ 
 
-    <title>Asia OA Helper For Chrome</title>
-  </head>
+	.opening-arrow {
+		-webkit-transition: opacity 0.4s ease-in-out 0s;
+		transition: opacity 0.4s ease-in-out 0s;
+		position: absolute;
+		bottom: 65px;
+		left: 50%;
+		margin-left: -110px;
+		width: 220px;
+		height: 50px;
+		cursor: pointer;
+	}
+	.arrow-hint {
+		-webkit-transition: opacity 0.4s ease-in-out 0s;
+		transition: opacity 0.4s ease-in-out 0s;
+		text-align: center;
+		font-size: 13px;
+		margin-bottom: 10px;
+		opacity: 1;
+	}
+	.arrow-icon {
+		margin: 0 auto;
+		width: 33px;
+		height: 19px;
+		background: url("imgs/arrow.png") no-repeat left top;
+		-webkit-animation: slide-fade 2s linear 1s infinite;
+		animation: slide-fade 2s linear 1s infinite;
+	}
 
-  <body>
+	</style>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/cssrain/assie">View on GitHub</a>
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
 
-          <h1 id="project_title">Asia OA Helper For Chrome</h1>
-          <h2 id="project_tagline">亚信OA助手</h2>
+	<script src="lib/jquery.js"></script>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/cssrain/assie/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/cssrain/assie/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+	<script type="text/javascript" src="lib/fullpage/jquery.fullPage.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				sectionsColor: ['#129de7', '#4BBFC3', '#7BAABE','#1889c5','#ff6600'],
+       			css3: true
+       		});
+		});
+	</script>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
-<a name="asia-oa-helper-for-chrome-%E4%BA%9A%E4%BF%A1oa%E5%8A%A9%E6%89%8B" class="anchor" href="#asia-oa-helper-for-chrome-%E4%BA%9A%E4%BF%A1oa%E5%8A%A9%E6%89%8B"><span class="octicon octicon-link"></span></a>Asia OA Helper For Chrome 亚信OA助手</h1>
+</head>
+<body>
+<div id="fullpage">
+	<div class="section" id="section0">
+		<h1>亚信OA报销助手</h1>
+		<p>让你轻松使用公司OA</p>
+		<img src="imgs/1.png" alt="fullPage" />
+		<div id="start_browse" class="opening-arrow">
+		      <p class="arrow-hint">滑动以继续</p>
+		      <div class="arrow-icon"></div>
+		</div>
+	</div>
+	<div class="section" id="section1">
+		<h1>快捷导航</h1>
+		<p>助手集合了公司内网常用的链接，如报销，机票，学习等，让你快速链接到公司内网。</p>
+		<img src="imgs/2.png" alt="fullPage" />
+	</div>
+	<div class="section" id="section2">
+		<h1>一键报销</h1>
+		<p>通过此功能，你可以再也不担心网络等问题导致要重新填写报销单了。出租车清单，机场来回清单，行程清单通通一键生成。</p>
+		<img src="imgs/3.png" alt="fullPage" />
+	</div>
+	<div class="section" id="section3">
+		<h1>加班小票打印</h1>
+		<p>通过此功能，加班小票打印妥妥的，再也不担心加班没餐饮小票了。</p>
+		<img src="imgs/4.png" alt="fullPage" />
+	</div>
+	<div class="section" id="section4">
+		<h1><a href="https://chrome.google.com/webstore/detail/ignahanahanaegnacbbiflgfebkbobbl" target="_blank">立即使用</a></h1>
+	</div>
+</div>
 
-<p>为了节约大家时间，提供工作效率，方便填写报销明细，故开发了此扩展。
-此扩展是一个Chrome的插件，大家可以去Chrome应用商店安装。
-地址是：<a href="https://chrome.google.com/webstore/detail/ignahanahanaegnacbbiflgfebkbobbl">亚信OA助手Chrome Plugin</a>.</p>
-
-<h2>
-<a name="oa%E5%BF%AB%E6%8D%B7%E5%AF%BC%E8%88%AA" class="anchor" href="#oa%E5%BF%AB%E6%8D%B7%E5%AF%BC%E8%88%AA"><span class="octicon octicon-link"></span></a>OA快捷导航</h2>
-
-<p>让导航更便捷。</p>
-
-<p><img src="https://raw.githubusercontent.com/cssrain/assie/master/prtsc/1.png" alt="OA快捷导航"></p>
-
-<h2>
-<a name="%E4%B8%80%E9%94%AE%E9%A2%84%E8%A7%88%E6%8A%A5%E9%94%80%E5%8D%95" class="anchor" href="#%E4%B8%80%E9%94%AE%E9%A2%84%E8%A7%88%E6%8A%A5%E9%94%80%E5%8D%95"><span class="octicon octicon-link"></span></a>一键预览报销单</h2>
-
-<p>在报销页面，点击下方的“一键预览报销单”按钮，即可更直观的预览本次报销的详情。</p>
-
-<p><img src="https://raw.githubusercontent.com/cssrain/assie/master/prtsc/2.png" alt="一键预览报销单"></p>
-
-<h2>
-<a name="%E4%B8%80%E9%94%AE%E7%94%9F%E6%88%90%E6%98%8E%E7%BB%86" class="anchor" href="#%E4%B8%80%E9%94%AE%E7%94%9F%E6%88%90%E6%98%8E%E7%BB%86"><span class="octicon octicon-link"></span></a>一键生成明细</h2>
-
-<p>在明细页面内，把明细都生成。在使用一键生成明细时，如果只填写一个，另外2个不填写，那么另外2个会被冲掉，所以请使用时，务必都填写（如果有明细的话）。</p>
-
-<p><img src="https://raw.githubusercontent.com/cssrain/assie/master/prtsc/4.png" alt="一键预览报销单"></p>
-
-<h2>
-<a name="%E5%8D%87%E7%BA%A7%E8%AE%B0%E5%BD%95" class="anchor" href="#%E5%8D%87%E7%BA%A7%E8%AE%B0%E5%BD%95"><span class="octicon octicon-link"></span></a>升级记录</h2>
-
-<p>v0.3
-添加数据转换工具，Excel To JSON。
-自定义快捷菜单（配置页）【待做】</p>
-
-<p>v0.2
-添加OA快捷菜单；
-语音读取报销内容；</p>
-
-<p>v0.1
-创建第一个版本</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Asia OA Helper For Chrome maintained by <a href="https://github.com/cssrain">cssrain</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
+</body>
 </html>
