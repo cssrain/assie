@@ -41,14 +41,27 @@ function setOtherFeeList(json){
 
 $(function(){
 	//修复系统在chrome下的bug
-	$("#ApplyBaseInfo1_DropDownListTask").removeAttr("disabled");
+	var timeDis = setInterval(function(){
+		removeDis();
+	},1000);
 
+	function removeDis(){ 
+		$("#ApplyBaseInfo1_DropDownListTask").removeAttr("disabled");
+	}
+	
+	$(".OraTableCellText tr:eq(2) td.OraTableBorder1100").css("width","118px");
+	$(".OraTableCellText tr:eq(2) td.OraTableBorder1100:eq(0)").css("width","154px");
+	$("#BmT_table .OraTableBorder0011").css("width","auto");
+
+                   
+               
 	//插入textarea
-	var textHtml = "<div style='padding:20px;' id='ChromeApp_wrap'>"+
+	var textHtml = "<div class='text-center'><input type='button' class='btn btn-primary' value='预览报销单' id='openBg'  /></div>"+
+	"<div style='padding:20px;' id='ChromeApp_wrap'>"+
 	"<p style='padding:10px 20px;'><a href='javascript:;' id='ChromeApp_open'>不知道插入什么数据？赶紧使用数据转换工具</a></p>"+
 	"<textarea class='form-control' rows='8' id='ChromeApp_txt' placeholder='请输入报销费用明细'></textarea>"+
 	"</div>"+
-	"<div class='text-center'><input type='button' class='btn btn-primary' value='一键生成' id='ChromeApp_btn'  />";
+	"<div class='text-center'><input type='button' class='btn btn-primary' value='一键生成' id='ChromeApp_btn'  /></div>";
 	$("#Form1").append(textHtml);
 
 
@@ -65,5 +78,19 @@ $(function(){
 		setDateList(trafficData);
 	});
 
+
+	$("#openBg").click(function(){
+        chrome.extension.sendRequest({"msg":"preview"});
+        return false;
+	  	//chrome.tabs.executeScript(null,{file:"/lib/jquery.js"},function(){
+		  	//chrome.tabs.executeScript(null,{file:"/userscript/preview.js"},function(){
+				//chrome.tabs.create({
+				    //url: chrome.extension.getURL("preview.html"),
+				    //selected: true
+				//});
+		  	//});
+	  	//});
+	  	//return false;
+	});
 
 });

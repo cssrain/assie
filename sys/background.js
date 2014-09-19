@@ -25,19 +25,28 @@ chrome.tabs.onCreated.addListener(function(tab) {
    */
 
 chrome.extension.onRequest.addListener(function(json){
-   if(json.msg&&json.msg=="open"){
-      openDataToolsPage();
-   }
+  if(json.msg){
+     if(json.msg=="open"){
+        openDataToolsPage();
+     }else if(json.msg=="preview"){
+        openPreviewPage();
+     }
+  }
 });
 
 
 function openDataToolsPage(){
   var url = chrome.extension.getURL("dataConverter.html") ;
   window.open( url );
-    /*
-      chrome.tabs.create({
-          url: chrome.extension.getURL("dataConverter.html"), 
-          selected: true
-      });
-  */
+}
+
+function openPreviewPage(){
+  chrome.tabs.executeScript(null,{file:"/lib/jquery.js"},function(){
+    chrome.tabs.executeScript(null,{file:"/userscript/preview.js"},function(){
+    chrome.tabs.create({
+        url: chrome.extension.getURL("preview.html"),
+        selected: true
+    });
+    });
+  });
 }
